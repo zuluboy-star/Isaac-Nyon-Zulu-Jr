@@ -351,47 +351,92 @@ body {
     background: #ff8800;          /* Lighter orange for hover */
     color: #fff;
 }
-@media (max-width:600px) {
-  .autobiography,
-  .main-container,
-  .profile-section {
-    width: 96vw;
-    max-width: 430px;
-    margin: 0 auto;
-    padding: 1.2em 2vw 1.2em 2vw;
-    box-sizing: border-box;
-    float: none; /* remove any float for mobile */
+/* Mobile fixes for home page hero section */
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1rem;
   }
-  .autobiography img,
-  .profile-img {
-    max-width: 120px;
-    width: 50vw;
-    height: auto;
-    display: block;
-    margin: 0 auto 1em auto;
-    border-radius: 50%;
-    box-shadow: 0 3px 21px #0648a440;
-  }
-  .content,
-  .bio-text,
-  .autobiography p {
-    font-size: 1.07rem;
+  
+  .hero-container {
+    flex-direction: column;
     text-align: center;
     width: 100%;
-    margin: 0 auto 12px auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
-  /* Remove unwanted left padding if present */
-  .autobiography,
-  .main-container,
-  .profile-section {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  
+  .hero-content {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .hero-image {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .profile-img {
+    max-width: 150px;
+    width: 40vw;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Fix skills section on mobile */
+  .skills {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+  
+  .skills-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    flex: 0 1 45%;
+    margin: 0.5rem;
+  }
+  
+  /* Fix projects section on mobile */
+  .projects {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+  
+  .project-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Fix about and contact sections */
+  .about, .contact {
+    padding: 2rem 1rem;
+    width: 100%;
   }
 }
 
 
 
 .
+
 
 
 
