@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+     <meta charset="UTF-8">
+    <title>Student Project Manager App | Isaac Nyon Zulu Jr.</title>
+    <meta name="description" content="Student Project Manager web app by Isaac Nyon Zulu Jr. Organize, track, and manage academic projects easily.">
+    <meta name="keywords" content="Project Manager, Student Projects, Academic, Isaac Nyon Zulu Jr, Portfolio, Web App">
+    <meta name="author" content="Isaac Nyon Zulu Jr.">
+    <meta charset="UTF-8">
+    <title>Student Project Manager</title>
+    <link rel="stylesheet" href="project-manager.css">
+</head>
+<body>
+    
+    <div class="pm-container">
+        <div class="pm-header">
+    <span class="pm-logo">
+        <svg width="34" height="34" viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="15" fill="#3b82f6"/>
+            <text x="16" y="22" font-size="17" fill="#fff" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">SPM</text>
+        </svg>
+    </span>
+    Student Project Manager
+</div>
+
+        <form class="pm-form" id="projectForm">
+            <input type="text" id="projTitle" placeholder="Project Title" required />
+            <input type="date" id="projDue" required />
+            <textarea id="projDesc" rows="2" placeholder="Project Description" required></textarea>
+            <button type="submit">Add Project</button>
+        </form>
+
+        <ul class="pm-list" id="projectList">
+            <!-- Project items will be added here -->
+        </ul>
+    </div>
+   <script>
+    const form = document.getElementById('projectForm');
+    const list = document.getElementById('projectList');
+
+    // Load projects from localStorage
+    function loadProjects() {
+        const projects = JSON.parse(localStorage.getItem('spm_projects')) || [];
+        projects.forEach(proj => {
+            list.appendChild(createProjectItem(proj.title, proj.due, proj.desc));
+        });
+    }
+
+    // Save projects to localStorage
+    function saveProjects() {
+        const projects = [];
+        list.querySelectorAll('li').forEach(li => {
+            projects.push({
+                title: li.querySelector('.pm-title').innerText,
+                due: li.querySelector('.pm-date').innerText.replace('Due: ', ''),
+                desc: li.querySelector('.pm-desc').innerText
+            });
+        });
+        localStorage.setItem('spm_projects', JSON.stringify(projects));
+    }
+
+    function createProjectItem(title, due, desc){
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="pm-title">${title}</span>
+                        <span class="pm-desc">${desc}</span>
+                        <span class="pm-date">Due: ${due}</span>
+                        <div class="pm-actions">
+                            <button class="del-btn">Delete</button>
+                        </div>`;
+        li.querySelector('.del-btn').onclick = function(){
+            li.remove();
+            saveProjects();
+        };
+        return li;
+    }
+
+    form.onsubmit = function(e){
+        e.preventDefault();
+        const title = form.projTitle.value;
+        const due = form.projDue.value;
+        const desc = form.projDesc.value;
+        if(title && due && desc) {
+            list.appendChild(createProjectItem(title, due, desc));
+            saveProjects();
+            form.reset();
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', loadProjects);
+</script>
+
+</body>
+</html>

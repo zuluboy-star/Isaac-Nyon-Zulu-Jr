@@ -1,0 +1,189 @@
+/* Student Project Manager Styles */
+.pm-container {
+    max-width: 370px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 40px #1e40af16;
+    padding: 2rem 1.2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.pm-header {
+    font-size: 1.3rem;
+    color: #3b82f6;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.pm-logo {
+    vertical-align: middle;
+    margin-right: 0.7rem;
+    display: inline-block;
+    animation: logoBounce 2s infinite;
+}
+@keyframes logoBounce {
+    0%,100% { transform: translateY(0);}
+    50%     { transform: translateY(-6px);}
+}
+
+.pm-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.pm-form input,
+.pm-form textarea {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-size: 1rem;
+    background: #f4f7fb;
+    transition: border 0.18s;
+}
+
+.pm-form input:focus,
+.pm-form textarea:focus {
+    border: 1.5px solid #3b82f6;
+    outline: none;
+    background: #fff;
+}
+
+.pm-form input[type="date"] {
+    max-width: 140px;
+}
+
+.pm-form button {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 1.3rem;
+    font-weight: 500;
+    font-size: 1.03rem;
+    cursor: pointer;
+    margin-top: 0.2rem;
+    align-self: flex-start;
+    transition: background 0.17s;
+}
+
+.pm-form button:hover {
+    background: #06b6d4;
+}
+
+.pm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pm-list li {
+    background: #f9fafb;
+    border-radius: 7px;
+    box-shadow: 0 1px 9px #3b82f610;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: fadeInItem 0.4s;
+}
+
+@keyframes fadeInItem {
+    from { opacity: 0; transform: translateY(18px);}
+    to   { opacity: 1; transform: translateY(0);}
+}
+
+.pm-title {
+    font-weight: 600;
+    color: #3949ab;
+    font-size: 1.06rem;
+}
+
+.pm-desc {
+    font-size: 0.93rem;
+    color: #374151;
+    margin-bottom: 0.3rem;
+    margin-top: 0.15rem;
+}
+
+.pm-date {
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.pm-actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    margin-top: 0.3rem;
+}
+
+.pm-actions button {
+    background: transparent;
+    border: none;
+    color: #e3342f;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.13s;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+}
+
+.pm-actions button:hover {
+    color: #f26800;
+    background: #e2e8f0;
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .pm-container {
+        padding: 1rem 0.2rem;
+    }
+    .pm-header { font-size: 1.1rem; }
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    align-items: center;
+}
+
+.project-card {
+    max-width: 370px;
+    width: 98vw;
+    padding: 1.1rem 1.2rem 1.2rem 1.2rem;
+    margin: 0 auto;
+    border-radius: 16px;
+    text-align: left;
+    background: #1e293b;
+    color: #dae4f2;
+    box-shadow: 0 4px 22px #0004;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+@media (max-width:600px) {
+    .projects-list {
+        gap: 1.25rem;
+    }
+    .project-card {
+        max-width: 97vw;
+        padding: 0.8rem 0.5rem 1rem 0.5rem;
+        font-size: 0.98rem;
+    }
+    .project-card img {
+        max-width: 98vw;
+        margin-bottom: 10px;
+    }
+}
