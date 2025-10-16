@@ -352,52 +352,42 @@ body {
     color: #fff;
 }
 @media (max-width:600px) {
-    .contact {
-        padding: 26px 4vw;
+    form {
+        width: 96vw;
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 1.3rem 2vw 1.2rem 2vw;
+        font-size: 0.99rem;
     }
-    .contact h2 {
-        font-size: 1.25rem;
+    form input,
+    form select,
+    form textarea,
+    form button {
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 1.22em;
+        box-sizing: border-box;
     }
-    .social-links {
-        gap: 1rem;
-    }
-    .social-links a {
-        font-size: 1.35rem;
-        width: 34px;
-        height: 34px;
-    }
-    .contact-link {
+    .form-label, label {
         font-size: 0.97rem;
+        display: block;
+        margin-bottom: 0.38em;
     }
-    .project-card {
-        max-width: 96vw;
-        padding: 1rem 0.5rem;
+    .form-group {
+        padding: 0.25em 0;
     }
-    .skills,
-    .skills-list {
-        max-width: 96vw;
-        font-size: 0.9rem;
-    }
-    /* Nav example */
-    .navbar {
-        flex-direction: column;
-        padding: 8px 3vw;
-        min-height: auto;
-    }
-    .nav-links {
-        gap: 12px;
-        font-size: 0.97rem;
+    /* Make submit button easier to tap */
+    form button, .submit-btn {
+        padding: 0.75em 0.5em;
+        font-size: 1.07rem;
+        border-radius: 6px;
     }
 }
-.project-card img {
-    max-width: 95vw;
-    height: auto;
-}
-
 
 
 
 .
+
 
 
 
