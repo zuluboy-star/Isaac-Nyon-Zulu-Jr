@@ -68,6 +68,13 @@ body {
     border: none;
     color: var(--text-primary);
 }
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* ... */
+}
 
 .hero {
     min-height: 100vh;
@@ -351,91 +358,43 @@ body {
     background: #ff8800;          /* Lighter orange for hover */
     color: #fff;
 }
-/* Mobile fixes for home page hero section */
 @media (max-width: 600px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-  
   .hero-container {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
   }
-  
+
   .hero-content {
-    width: 100%;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
+    width: 100vw !important;
+    padding: 0 2vw !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
   }
-  
-  .hero-content h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-  
+
   .hero-image {
-    width: 100%;
-    text-align: center;
-    margin: 0;
+    width: 100vw !important;
+    text-align: center !important;
+    margin-bottom: 1.2rem !important;
   }
-  
+
   .profile-img {
-    max-width: 150px;
-    width: 40vw;
-    height: auto;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  /* Fix skills section on mobile */
-  .skills {
-    padding: 2rem 1rem;
-    width: 100%;
-  }
-  
-  .skills-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .skill-item {
-    flex: 0 1 45%;
-    margin: 0.5rem;
-  }
-  
-  /* Fix projects section on mobile */
-  .projects {
-    padding: 2rem 1rem;
-    width: 100%;
-  }
-  
-  .project-card {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Fix about and contact sections */
-  .about, .contact {
-    padding: 2rem 1rem;
-    width: 100%;
+    max-width: 150px !important;
+    width: 40vw !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 50% !important;
   }
 }
 
 
 
 .
+
 
 
 
