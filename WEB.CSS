@@ -352,41 +352,47 @@ body {
     color: #fff;
 }
 @media (max-width:600px) {
-    form {
-        width: 96vw;
-        max-width: 420px;
-        margin: 0 auto;
-        padding: 1.3rem 2vw 1.2rem 2vw;
-        font-size: 0.99rem;
-    }
-    form input,
-    form select,
-    form textarea,
-    form button {
-        width: 100%;
-        font-size: 1rem;
-        margin-bottom: 1.22em;
-        box-sizing: border-box;
-    }
-    .form-label, label {
-        font-size: 0.97rem;
-        display: block;
-        margin-bottom: 0.38em;
-    }
-    .form-group {
-        padding: 0.25em 0;
-    }
-    /* Make submit button easier to tap */
-    form button, .submit-btn {
-        padding: 0.75em 0.5em;
-        font-size: 1.07rem;
-        border-radius: 6px;
-    }
+  .autobiography,
+  .main-container,
+  .profile-section {
+    width: 96vw;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 1.2em 2vw 1.2em 2vw;
+    box-sizing: border-box;
+    float: none; /* remove any float for mobile */
+  }
+  .autobiography img,
+  .profile-img {
+    max-width: 120px;
+    width: 50vw;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+    border-radius: 50%;
+    box-shadow: 0 3px 21px #0648a440;
+  }
+  .content,
+  .bio-text,
+  .autobiography p {
+    font-size: 1.07rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 12px auto;
+  }
+  /* Remove unwanted left padding if present */
+  .autobiography,
+  .main-container,
+  .profile-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 
 
 .
+
 
 
 
