@@ -484,9 +484,45 @@ body {
   from { opacity: 0; transform: translateY(-20px);}
   to   { opacity: 1; transform: translateY(0);}
 }
+body[data-theme="dark"] {
+  background: #121a26 !important;     /* Dark navy background */
+  color: #e2e7ef !important;          /* Lighter text for dark bg */
+}
+
+body[data-theme="dark"] .navbar,
+body[data-theme="dark"] .nav-container {
+  background: #16213a !important;
+  color: #e2e7ef !important;
+}
+
+body[data-theme="dark"] .hero,
+body[data-theme="dark"] .hero-content,
+body[data-theme="dark"] .hero-buttons,
+body[data-theme="dark"] .skills-list,
+body[data-theme="dark"] .skill-item {
+  background: transparent !important;
+  color: #e2e7ef !important;
+}
+
+body[data-theme="dark"] .profile-img {
+  border: 2px solid #388ad8 !important;
+}
+
+body[data-theme="dark"] .project-card {
+  background: #232c3d !important;   /* Match dark theme */
+  color: #e2e7ef !important;
+}
+
+body[data-theme="dark"] .project-card a.project-link {
+  background: orange !important;
+  color: #fff !important;
+}
+
+/* Feel free to add more selectors for each main section (about, contact, footer) */
 
 
 .
+
 
 
 
