@@ -520,8 +520,26 @@ body[data-theme="dark"] .project-card a.project-link {
 
 /* Feel free to add more selectors for each main section (about, contact, footer) */
 
+body[data-theme="dark"] .skill-item {
+  background: #232c3d !important;   /* Lighter dark bg for skills */
+  color: #e2e7ef !important;        /* Bright text */
+  opacity: 1 !important;            /* Always full opacity */
+  box-shadow: 0 1px 8px #0005 !important;
+}
+
+body[data-theme="dark"] .skill-item i,
+body[data-theme="dark"] .skill-item svg {
+  color: #3b82f6 !important;        /* Bright icon color (blue) */
+  opacity: 1 !important;
+}
+
+body[data-theme="dark"] .skill-item span {
+  color: #e2e7ef !important;        /* Visible text! */
+  opacity: 1 !important;
+}
 
 .
+
 
 
 
