@@ -553,8 +553,31 @@ body[data-theme="dark"] .hamburger:hover .bar {
   background: #36b4ed !important;   /* Lighter blue on hover */
 }
 
+body[data-theme="dark"] .contact {
+  background: #192634 !important;      /* Dark background for contact section */
+  color: #e2e7ef !important;           /* Bright text for contrast */
+}
+
+body[data-theme="dark"] .contact h2,
+body[data-theme="dark"] .contact-link,
+body[data-theme="dark"] .contact p,
+body[data-theme="dark"] .contact a {
+  color: #3b82f6 !important;           /* Bright blue or white text */
+  opacity: 1 !important;
+}
+
+body[data-theme="dark"] .social-links a {
+  color: #3b82f6 !important;
+}
+
+body[data-theme="dark"] .contact a:hover {
+  color: #06b6d4 !important;           /* Accent blue on hover */
+}
+
+
 
 .
+
 
 
 
