@@ -391,9 +391,54 @@ body {
   }
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 1em;
+}
+.bar {
+  height: 3px;
+  width: 25px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+@media (max-width: 800px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 2vw;
+    width: 80vw;
+    box-shadow: 0 2px 12px #22222222;
+    border-radius: 8px;
+    z-index: 99;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .navbar {
+    position: relative;
+  }
+}
+
+/* Make sure navigation lists look good stacked */
+.nav-menu li {
+  margin: 0.7em 0;
+  text-align: center;
+}
+
+
 
 
 .
+
 
 
 
