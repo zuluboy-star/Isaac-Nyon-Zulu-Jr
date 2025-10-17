@@ -10,11 +10,28 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-theme="dark"] {
-    --bg-primary: #111827;
-    --text-primary: #f9fafb;
-    --bg-secondary: #1f2937;
-    --text-secondary: #d1d5db;
+/* Light theme dropdown menu (default) */
+body[data-theme="light"] .nav-menu {
+  background: #1b344d;
+}
+body[data-theme="light"] .nav-menu li a,
+body[data-theme="light"] .nav-menu li button {
+  color: #fff;
+}
+
+/* Dark theme dropdown menu */
+body[data-theme="dark"] .nav-menu {
+  background: #fff; /* White or very light for contrast */
+  border: 1px solid #388ad8;
+}
+body[data-theme="dark"] .nav-menu li a,
+body[data-theme="dark"] .nav-menu li button {
+  color: #1b344d; /* Dark text for contrast */
+}
+body[data-theme="dark"] .nav-menu li a:hover,
+body[data-theme="dark"] .nav-menu li button:hover {
+  background: #388ad8;
+  color: #fff;
 }
 
 body {
@@ -470,6 +487,7 @@ body {
 
 
 .
+
 
 
 
