@@ -408,36 +408,69 @@ body {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #1b344d; /* deep blue, or pick your brand color */
     position: absolute;
     top: 60px;
     right: 2vw;
-    width: 80vw;
-    box-shadow: 0 2px 12px #22222222;
-    border-radius: 8px;
+    width: 85vw;
+    box-shadow: 0 8px 24px #2224;
+    border-radius: 15px;
     z-index: 99;
+    padding: 1em 0;
+    gap: 0.3em;
+    animation: navFade 0.25s ease;
+    border: 1px solid #388ad8;
+    font-family: inherit;
   }
   .nav-menu.active {
     display: flex;
   }
+  .nav-menu li {
+    margin: 0;
+    text-align: center;
+    padding: 0.7em 0;
+    border-bottom: 1px solid #388ad855;
+    transition: background 0.15s;
+  }
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+  .nav-menu li a,
+  .nav-menu li button {
+    color: #fff;
+    font-size: 1.15rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 0.2em 0.8em;
+    border-radius: 6px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+  }
+  .nav-menu li a:hover,
+  .nav-menu li button:hover {
+    background: #388ad8;
+    color: #fff;
+  }
+
   .hamburger {
     display: flex;
-  }
-  .navbar {
-    position: relative;
+    z-index: 999;
   }
 }
 
-/* Make sure navigation lists look good stacked */
-.nav-menu li {
-  margin: 0.7em 0;
-  text-align: center;
+/* Nice fade-in animation */
+@keyframes navFade {
+  from { opacity: 0; transform: translateY(-20px);}
+  to   { opacity: 1; transform: translateY(0);}
 }
-
-
 
 
 .
+
 
 
 
