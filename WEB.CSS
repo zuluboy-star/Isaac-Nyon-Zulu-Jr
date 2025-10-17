@@ -537,8 +537,25 @@ body[data-theme="dark"] .skill-item span {
   color: #e2e7ef !important;        /* Visible text! */
   opacity: 1 !important;
 }
+/* Hamburger bars (mobile menu) - dark mode */
+body[data-theme="dark"] .hamburger .bar {
+  background: #3b82f6 !important;   /* Bright blue bar */
+  opacity: 1 !important;
+}
+
+/* Hamburger button itself: maybe add a little shadow or scale */
+body[data-theme="dark"] .hamburger {
+  /* optional: add a slight shadow or effect */
+  filter: drop-shadow(0 2px 7px #3b82f633);
+}
+
+body[data-theme="dark"] .hamburger:hover .bar {
+  background: #36b4ed !important;   /* Lighter blue on hover */
+}
+
 
 .
+
 
 
 
