@@ -35,3 +35,13 @@ navLinks.forEach(link => {
 });
 
 // (Add animated progress bars, contact form validation, etc. for full functionality)
+
+
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+
